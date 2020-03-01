@@ -23,7 +23,7 @@ services:
       CONCOURSE_POSTGRES_DATABASE: concourse
       CONCOURSE_EXTERNAL_URL: http://${myip}:8080
       CONCOURSE_ADD_LOCAL_USER: scooby:doo
-      CONCOURSE_MAIN_TEAM_LOCAL_USER: test
+      CONCOURSE_MAIN_TEAM_LOCAL_USER: scooby
   sonar:
     image: sonarqube
     privileged: true

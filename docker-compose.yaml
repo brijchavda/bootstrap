@@ -21,8 +21,8 @@ services:
       CONCOURSE_POSTGRES_USER: concourse_user
       CONCOURSE_POSTGRES_PASSWORD: concourse_pass
       CONCOURSE_POSTGRES_DATABASE: concourse
-      CONCOURSE_EXTERNAL_URL: http://localhost:8080
-      CONCOURSE_ADD_LOCAL_USER: test:test
+      CONCOURSE_EXTERNAL_URL: http://${myip}:8080
+      CONCOURSE_ADD_LOCAL_USER: scooby:doo
       CONCOURSE_MAIN_TEAM_LOCAL_USER: test
   sonar:
     image: sonarqube
@@ -32,4 +32,4 @@ services:
     environment:
       sonar.jdbc.username: concourse_user
       sonar.jdbc.password: concourse_pass
-      sonar.jdbc.url: jdbc:postgresql://localhost/sonar
+      sonar.jdbc.url: jdbc:postgresql://${myip}/sonar
